@@ -1,6 +1,6 @@
 const
-	homeRoute = require('./home');
-
+	homeRoute = require('./home'),
+	userRouter = require('./user');
 
 function init(server) {
 	server.get('*', function(req, res, next) {
@@ -13,6 +13,7 @@ function init(server) {
 	});
 
 	server.use('/home', homeRoute);
+	server.use('/users', userRouter);
 };
 
 module.exports = {

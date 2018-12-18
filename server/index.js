@@ -20,13 +20,13 @@ module.exports = function() {
 		server.set('port', config.port);
 		server.set('viewDir', config.viewDir);
 
-		server.engine('.hbs', expressHandlebars({
-            defaultLayout: 'default',
-            layoutsDir: config.viewDir + '/layouts',
-            extname: '.hbs'
-        }));
-        server.set('views', server.get('viewDir'));
-        server.set('view engine', '.hbs');
+		// server.engine('.hbs', expressHandlebars({
+  //           defaultLayout: 'default',
+  //           layoutsDir: config.viewDir + '/layouts',
+  //           extname: '.hbs'
+  //       }));
+  //       server.set('views', server.get('viewDir'));
+  //       server.set('view engine', '.hbs');
 
 		server.use(bodyParser.json());
 

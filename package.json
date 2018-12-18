@@ -11,10 +11,12 @@
   "author": "Khoa Hong",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "mongodb": "^2.2.16"
+    "mongodb": "^3.0.10",
+    "mongoose": "^5.1.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"
