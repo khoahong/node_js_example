@@ -1,6 +1,7 @@
 const
 	homeRoute = require('./home'),
-	userRouter = require('./user');
+	userRouter = require('./user'),
+	errorHandler = require('../utils/errorHandler');
 
 function init(server) {
 	server.get('*', function(req, res, next) {
@@ -14,6 +15,8 @@ function init(server) {
 
 	server.use('/home', homeRoute);
 	server.use('/users', userRouter);
+	
+	server.use(errorHandler);
 };
 
 module.exports = {

@@ -9,13 +9,14 @@ const
 module.exports = {
 	register,
 	getAll,
-	getById
+	getById,
+	update
 };
 
 function register(req, res, next) {
 	console.log(req.body);
 	userService.create(req.body)
-	   .then(() => res.json({message: 'Create user successfully!'}))
+	   .then(() => res.json({message: 'Create user successfully.'}))
 	   .catch(err => next(err));
 }
 
@@ -33,6 +34,6 @@ function getById(req, res, next) {
 
 function update(req, res, next) {
 	userService.update(req.params.id, req.body)
-		.then(() => req.json({}))
+		.then(user => res.json({message: 'Update user successfully.'}))
 		.catch(err => next(err));
 }
